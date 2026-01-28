@@ -1,0 +1,126 @@
+<div class="container d-flex flex-column gap-5">
+
+    <!-- --- banner ---  -->
+    <section>
+        <img src="images/banner.png" class="img-fluid w-100" />
+    </section>
+
+    <!-- --- info ---  -->
+    <section class="">
+        <!-- circles ---  -->
+        <div class="position-relative my-5">
+            <div class="decor-circle big"></div>
+            <div class="decor-circle small"></div>
+        </div>
+
+        <div class="pt-5 d-flex gap-2">
+            <div class="">
+                <h1>Conheça a Pedra Caída</h1>
+                <div class="description-text">
+                    <p class="m-0">No coração da Chapada das Mesas, apresentamos a Pedra Caída, um destino repleto de
+                        maravilhas
+                        naturais. São seis cachoeiras para visitação e um mundo inteiro de aventuras, um convite para
+                        tocar
+                        a natureza. Sinta, dos pés à cabeça, a sensação única desse lugar.
+                        <br>
+                        Injete adrenalina ao encarar a Tirolesa, uma descida que desafia todos os medos. Com 1400 metros
+                        de
+                        extensão e quase 400 metros de altura, a tirolesa é de tirar o fôlego. Além disso, exercite sua
+                        coragem de aventureiro com o teleférico da aventura, trilhas emocionantes e uma pirâmide
+                        mística.
+                        Venha sentir as melhores vibrações.
+                        <br>
+                        Descubra a magia da Pedra Caída e encante-se!
+                        <br>
+                        Não dá para descrever, tem que conhecer.
+                    </p>
+                </div>
+            </div>
+            <div class="vertical-text">Conheça a Pedra Caída</div>
+
+        </div>
+    </section>
+
+    <!-- --- calender ---  -->
+    <section class="">
+        <div class="row">
+            <div class="col-6">
+                <h1 class="fs-4">Choose the date of your ticket.</h1>
+                <div>
+                    <mat-card class="demo-inline-calendar-card">
+                        <mat-calendar [(selected)]="selected"></mat-calendar>
+                    </mat-card>
+
+                </div>
+            </div>
+            <!-- --- details ---  -->
+            <div class="col-6 align-items-center d-flex flex-column">
+                <h1 class="fs-4">See details</h1>
+                <div class="details-section overflow-hidden">
+                    <div class="cards-wrapper">
+                        <div class="side-card"></div>
+                        <div class="main-card">
+                            <div class="pix-logo">
+                                <div class="pix-icon"></div>
+                                <div class="pix-text">pix</div>
+                            </div>
+                            <h4>Discount on PIX</h4>
+                            <p>5% discount on Pix payments</p>
+                            <button class="learn-btn">Learn More</button>
+                        </div>
+                        <div class="side-card"></div>
+                    </div>
+
+                    <div class="slider-arrows">
+                        <button class="arrow-btn">&lsaquo;</button>
+                        <button class="arrow-btn">&rsaquo;</button>
+                    </div>
+
+                </div>
+
+                <div></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ---- carosal ---  -->
+    <section>
+        <div>
+            <h1 class="">Nossas Atrações</h1>
+            <div class="d-flex">
+                <div class="card w-100 border-0 card-img-main text-white">
+                    <img src="images/img-1.png" class="card-img" alt="Teleférico">
+
+                    <div class="card-img-overlay d-flex align-items-end">
+                        <div class="overlay-content">
+
+                            <h3 class="card-title">Teleférico da Aventura</h3>
+
+                            <p class="card-text">
+                                Teleférico da Aventura O Teleférico da Aventura no Complexo da Pedra Caída
+                                é uma das melhores atrações do complexo. Com
+                            </p>
+
+                            <button class="btn btn-primary saiba-btn">Saiba mais</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-fill d-flex justify-content-end w-100 gap-2">
+                    @for (item of carosalImgs; track $index) {
+                    <div class="card border-0 card-img-main text-white">
+                        <img [src]="item.imgSrc" class="card-img" alt="Teleférico">
+    
+                        <div class="card-img-overlay d-flex align-items-end vertical-text">
+                            <h1 class="fs-4">{{item.title}}</h1>
+                        </div>
+                    </div>
+                    }
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+</div>
