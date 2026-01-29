@@ -13,18 +13,27 @@
         <div>
             <div class="row justify-content-evenly gap-1">
                 @for (item of cards; track $index) {
-                <div class="card col-4 py-2 my-2">
-                    <img [src]="item.imgUrl" class="card-img-top">
-                    <div class="card-img-overlay">
-                        <h1 class="card-title">{{item.title}}</h1>
+                <div class="card col-4 py-2 my-2 image-card">
+
+                    <div class="image-wrapper">
+                        <img [src]="item.imgUrl" class="card-img-top">
+
+                        <div class="card-img-overlay d-flex align-items-end">
+                            <h2 class="card-title overlay-title">
+                                {{ item.title }}
+                            </h2>
+                        </div>
                     </div>
+
                     <div class="card-body">
-                        <p class="card-text">{{item.description}}</p>
+                        <p class="card-text">{{ item.description }}</p>
                         <a href="#" class="btn btn-primary">Learn More</a>
                     </div>
+
                 </div>
                 }
             </div>
+
         </div>
         <!-- --- main body ---  -->
 

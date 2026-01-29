@@ -12,11 +12,34 @@
 
 }
 
-.card-title {
-    color: #FFB212;
-}
-
-.card{
+.card {
     background-color: #F4F4F4;
     border: none;
+}
+
+.image-card {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.image-wrapper {
+    position: relative;
+}
+
+.image-wrapper img {
+    height: 240px;
+    object-fit: cover;
+}
+
+.card-img-overlay {
+    padding: 1rem;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0));
+}
+
+.overlay-title {
+    color: #FFB212;
+    font-weight: 700;
+    margin: 0;
 }
