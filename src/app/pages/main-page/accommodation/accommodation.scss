@@ -35,6 +35,43 @@
     text-transform: lowercase;
 }
 
+.room-image {
+    position: relative;
+    padding: 12px;
+}
+
+/* Image */
+.room-image img {
+    border-radius: 4px;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+/* Gray overlay ONLY on image */
+.room-image::after {
+    content: '';
+    position: absolute;
+    inset: 12px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Text ABOVE overlay */
+.room-title {
+    position: absolute;
+    bottom: 20px;
+    left: 24px;
+    margin: 0;
+    color: #ffc107;
+    font-weight: 700;
+    z-index: 3;
+    /* 👈 key fix */
+}
+
+
 /* Feature row */
 .feature-item {
     display: flex;

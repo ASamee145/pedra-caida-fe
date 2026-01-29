@@ -17,12 +17,14 @@
                     <div class="room-card" [ngClass]="room.colorClass">
 
                         <!-- Image -->
-                        <div class="room-image position-relative">
-                            <img [src]="room.image" class="img-fluid w-100" alt="{{ room.title }}" />
+                        <div class="room-image">
+                            <img [src]="room.image" class="img-fluid w-100" />
+
                             <h3 class="room-title">
                                 {{ room.title }}
                             </h3>
                         </div>
+
 
                         <!-- Content -->
                         <div class="p-4 text-white">
